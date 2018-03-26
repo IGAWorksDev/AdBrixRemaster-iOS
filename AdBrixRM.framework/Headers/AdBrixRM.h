@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <AdBrixRM/Reachability.h>
-#import <AdBrixRM/IgaworksADUtil.h>
+//#import <AdBrixRM/IgaworksADUtil.h>
+#import "IgaworksADUtil.h"
 
 //! Project version number for AdBrixRM.
 FOUNDATION_EXPORT double AdBrixRMVersionNumber;
