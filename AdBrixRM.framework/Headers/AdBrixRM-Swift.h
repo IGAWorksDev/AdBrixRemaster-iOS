@@ -326,7 +326,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url;
 - (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// 사용자의 GPS 위치를 설정한다
-- (void)setLocationWithLongitude:(double)longitude latitude:(double)latitude;
+- (void)setLocationWithLatitude:(double)latitude longitude:(double)longitude;
 /// <ul>
 ///   <li>
 ///     API 명칭 : setAge API, setGender API
