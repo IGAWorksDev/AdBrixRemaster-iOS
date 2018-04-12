@@ -458,18 +458,21 @@ typedef SWIFT_ENUM(NSInteger, AdBrixCustomCohortType) {
 SWIFT_CLASS("_TtC8AdBrixRM32AdBrixRmCommerceProductAttrModel")
 @interface AdBrixRmCommerceProductAttrModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (AdBrixRmCommerceProductAttrModel * _Nonnull)setModelWithDictionary:(NSDictionary<NSString *, NSString *> * _Nonnull)dictionary SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
 SWIFT_CLASS("_TtC8AdBrixRM36AdBrixRmCommerceProductCategoryModel")
 @interface AdBrixRmCommerceProductCategoryModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (AdBrixRmCommerceProductCategoryModel * _Nonnull)setModelWithCategoryArr:(NSArray<NSString *> * _Nonnull)categoryArr SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
 SWIFT_CLASS("_TtC8AdBrixRM28AdBrixRmCommerceProductModel")
 @interface AdBrixRmCommerceProductModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (AdBrixRmCommerceProductModel * _Nonnull)setModelWithProductId:(NSString * _Nonnull)productId productName:(NSString * _Nonnull)productName price:(double)price quantity:(NSInteger)quantity discount:(double)discount currencyString:(NSString * _Nullable)currencyString categories:(AdBrixRmCommerceProductCategoryModel * _Nullable)categories extraAttrs:(AdBrixRmCommerceProductAttrModel * _Nullable)extraAttrs SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
