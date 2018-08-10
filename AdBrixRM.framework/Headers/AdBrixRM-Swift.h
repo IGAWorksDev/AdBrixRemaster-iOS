@@ -664,6 +664,13 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)setGenderWithAdBrixGenderType:(enum AdBrixGenderType)adBrixGenderType;
 /// <ul>
 ///   <li>
+///     API 명칭 : clearUserProperties API
+///   </li>
+/// </ul>
+/// 유저 구분(프로퍼티)값들을 초기화
+- (void)clearUserProperties;
+/// <ul>
+///   <li>
 ///     API 명칭 : setUserProperties API
 ///   </li>
 /// </ul>
