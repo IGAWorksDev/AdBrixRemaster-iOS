@@ -700,6 +700,8 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// </ul>
 /// 유저 구분(프로퍼티)값을 반환한다
 - (NSDictionary<NSString *, id> * _Nullable)getUserProperties SWIFT_WARN_UNUSED_RESULT;
+- (void)setPushEnableToPushEnable:(BOOL)toPushEnable;
+- (void)setRegstrationIdWithDeviceToken:(NSData * _Nonnull)deviceToken;
 /// <ul>
 ///   <li>
 ///     API 명칭 : convertChannel API
