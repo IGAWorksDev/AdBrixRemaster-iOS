@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AdBrixRM.h</key>
 		<data>
-		1doMeWCPlmtnDtNtXIUS0F+KVSk=
+		T7H34cQCvrAY2lRpTIIXlpX2Gf4=
 		</data>
 		<key>Headers/IgaworksADUtil.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PiiCL3JPyBROkrmGA34691qETYI=
+		UVKKlSDkgQCBp4C7xDdVDCz2UkY=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<data>
-		KAwAuQ+fFGvD09zZE7rGZ2IscXo=
+		XNvXyXO5YOVf5+e42hVrO/wRqqs=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		b3m0/2V2KEJwSOROuobKgv5Na8I=
+		zZVAQPwLxJQt4qSZJ2mXM4z4wRM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,11 +62,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1doMeWCPlmtnDtNtXIUS0F+KVSk=
+			T7H34cQCvrAY2lRpTIIXlpX2Gf4=
 			</data>
 			<key>hash2</key>
 			<data>
-			O1L3Sck0IrGTa1gYVY3dHjPxU3SKHj/T5ncb55AWpzA=
+			CPKa4rUVqS5e6fuEh9TRFW9j5dleLx5I5BgaL0L6MCY=
 			</data>
 		</dict>
 		<key>Headers/IgaworksADUtil.h</key>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KAwAuQ+fFGvD09zZE7rGZ2IscXo=
+			XNvXyXO5YOVf5+e42hVrO/wRqqs=
 			</data>
 			<key>hash2</key>
 			<data>
-			yOq8XeixT+7TpnhgiZylE+FLSYrk2I66zyHIaHkcw/Y=
+			1Ax1UNCYJdFExHgIEQ7ChhvyTR5sXz6o6df/+tRw0B8=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			b3m0/2V2KEJwSOROuobKgv5Na8I=
+			zZVAQPwLxJQt4qSZJ2mXM4z4wRM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Pkihtw0s2go7X4OJc5EgI0B1Tm6YrqsL9WWwXDR1znA=
+			XJWFF+Woi2CueZEG7Jxr1gedSTSCGiFBccakg1j+yhA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
