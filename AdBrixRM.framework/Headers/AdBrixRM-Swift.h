@@ -640,9 +640,9 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (AdBrixRmCommerceProductModel * _Nonnull)createCommerceProductDataWithProductId:(NSString * _Nonnull)productId productName:(NSString * _Nonnull)productName price:(double)price quantity:(NSInteger)quantity discount:(double)discount currencyString:(NSString * _Nullable)currencyString category:(AdBrixRmCommerceProductCategoryModel * _Nullable)category productAttrsMap:(AdBrixRmCommerceProductAttrModel * _Nullable)productAttrsMap SWIFT_WARN_UNUSED_RESULT;
 /// purchase Product의 어트리뷰트 모델을 생성한다
 - (AdBrixRmCommerceProductAttrModel * _Nonnull)createCommerceProductAttrDataWithDictionary:(NSDictionary<NSString *, NSString *> * _Nullable)dictionary SWIFT_WARN_UNUSED_RESULT;
-- (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url;
 - (void)deepLinkOpenWithUrlStr:(NSString * _Nonnull)urlStr;
 - (void)deepLinkOpenWithUrlStr:(NSString * _Nonnull)urlStr eventDateStr:(NSString * _Nonnull)eventDateStr;
+- (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url;
 - (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// 사용자의 GPS 위치를 설정한다
 - (void)setLocationWithLatitude:(double)latitude longitude:(double)longitude;
