@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AdBrixRM-Swift.h</key>
 		<data>
-		KQavEmNyJgnSITvXdw2KkVKg6b4=
+		9HYklWoI2+fsXvp9mZCzJCpcXZ4=
 		</data>
 		<key>Headers/AdBrixRM.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/IgaworksADUtil.h</key>
 		<data>
-		Pd/KjOuaoJzBP7IoH+b4bHiQPvk=
+		82OoHH6GCnbcVJCZrsoz540hB0E=
 		</data>
 		<key>Headers/Reachability.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yyyq+lNTME4rdejDvR32AmKt4Kk=
+		tM7dkGjf/bcujgHukN03u3HcanM=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<data>
-		QsZX7VFoCIdxX2zRwwxymwGpCKU=
+		E42XKy11ksG+yOdAeePMnoMkVa8=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		LNMncrBrpzb7KEuIbs6m/Vo5cEY=
+		RZbtZPDBYfrOJecKLdSrSpQQ/aA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,11 +51,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KQavEmNyJgnSITvXdw2KkVKg6b4=
+			9HYklWoI2+fsXvp9mZCzJCpcXZ4=
 			</data>
 			<key>hash2</key>
 			<data>
-			sX+2YC2R/A+tgsmXbt1q++F6vCXXOjFkT8q422pZtL0=
+			At3NW/zpRC5APw7L92Gj1zwug5N0DI0heDqId5vMEXk=
 			</data>
 		</dict>
 		<key>Headers/AdBrixRM.h</key>
@@ -73,11 +73,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Pd/KjOuaoJzBP7IoH+b4bHiQPvk=
+			82OoHH6GCnbcVJCZrsoz540hB0E=
 			</data>
 			<key>hash2</key>
 			<data>
-			/bzI+QKvbiumZrnpfuciPOTGLsuVRD8g1MCQ8ycImoo=
+			slV4tB34yN7HBnRam3xY3sNzOWZ+AbPZLBAC0uOjXpk=
 			</data>
 		</dict>
 		<key>Headers/Reachability.h</key>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QsZX7VFoCIdxX2zRwwxymwGpCKU=
+			E42XKy11ksG+yOdAeePMnoMkVa8=
 			</data>
 			<key>hash2</key>
 			<data>
-			GWB0KvWxJSmzeMTu/yYS5+EgCrQr3+D9hKVSNUaQebU=
+			JJSzHvzorIocJBLca3RPqFnxh1uJ07MJQmGf+Yh5M10=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LNMncrBrpzb7KEuIbs6m/Vo5cEY=
+			RZbtZPDBYfrOJecKLdSrSpQQ/aA=
 			</data>
 			<key>hash2</key>
 			<data>
-			CdABVboivYPe9hgEwd1cQ6mP4nZnzbVOXjBsbi+B8qo=
+			2sXJgHAAhzPIrksooB7y20jPldwa0rRwlJdjw+28hc4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

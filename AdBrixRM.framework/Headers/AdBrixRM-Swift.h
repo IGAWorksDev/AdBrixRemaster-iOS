@@ -216,7 +216,7 @@ SWIFT_CLASS("_TtC8AdBrixRM13AdBrixPrivate")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 - (NSString * _Nonnull)getAppleAdvertisingIdentifierStr SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getAppleAdvertisingTrackingEnable SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)getAppleAdvertisingTrackingEnable SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
