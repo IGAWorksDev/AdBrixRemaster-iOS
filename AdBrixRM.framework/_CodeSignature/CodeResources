@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tM7dkGjf/bcujgHukN03u3HcanM=
+		BDSW8GEloInSyLtrqG7rIdgL5ko=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<data>
-		E42XKy11ksG+yOdAeePMnoMkVa8=
+		x3Bwuf/wMPR84MWLeqJc0VZqXG8=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		RZbtZPDBYfrOJecKLdSrSpQQ/aA=
+		JbP84iVxMmgK857+eQFPIu4h3Vk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E42XKy11ksG+yOdAeePMnoMkVa8=
+			x3Bwuf/wMPR84MWLeqJc0VZqXG8=
 			</data>
 			<key>hash2</key>
 			<data>
-			JJSzHvzorIocJBLca3RPqFnxh1uJ07MJQmGf+Yh5M10=
+			jDJMfTFJFPQ4zsgQip2yTiKCHCiUAhgiAwgXTHQZzxk=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RZbtZPDBYfrOJecKLdSrSpQQ/aA=
+			JbP84iVxMmgK857+eQFPIu4h3Vk=
 			</data>
 			<key>hash2</key>
 			<data>
-			2sXJgHAAhzPIrksooB7y20jPldwa0rRwlJdjw+28hc4=
+			c45soMioPSS6QzLewhwQYUSmUiHl27jibHRhVQcgaks=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -149,7 +149,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -180,24 +180,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -233,13 +221,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>
