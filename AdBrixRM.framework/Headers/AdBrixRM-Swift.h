@@ -185,11 +185,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC8AdBrixRM15AdBrixBase64Key")
 @interface AdBrixBase64Key : NSObject
-+ (AdBrixBase64Key * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (NSString * _Nonnull)getSuperkey SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getTrackingSuperkey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

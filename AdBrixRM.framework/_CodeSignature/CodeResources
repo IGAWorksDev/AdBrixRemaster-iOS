@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AdBrixRM-Swift.h</key>
 		<data>
-		9HYklWoI2+fsXvp9mZCzJCpcXZ4=
+		b+4JIMPl7f74E63eacQcwS/BSFA=
 		</data>
 		<key>Headers/AdBrixRM.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tM7dkGjf/bcujgHukN03u3HcanM=
+		GJFf0mTgrlNr8eEHgkOoapuS4EA=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<data>
-		E42XKy11ksG+yOdAeePMnoMkVa8=
+		ddJHweTipMXvxYlJUDNbXyG8KWo=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		RZbtZPDBYfrOJecKLdSrSpQQ/aA=
+		vZxUTepk4RhlwUpRmqNK4cR0P5o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,11 +51,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9HYklWoI2+fsXvp9mZCzJCpcXZ4=
+			b+4JIMPl7f74E63eacQcwS/BSFA=
 			</data>
 			<key>hash2</key>
 			<data>
-			At3NW/zpRC5APw7L92Gj1zwug5N0DI0heDqId5vMEXk=
+			aHMKgrN+nSJKIJyh01abSHVwL2Wyxp7ft7SM7N/na9A=
 			</data>
 		</dict>
 		<key>Headers/AdBrixRM.h</key>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E42XKy11ksG+yOdAeePMnoMkVa8=
+			ddJHweTipMXvxYlJUDNbXyG8KWo=
 			</data>
 			<key>hash2</key>
 			<data>
-			JJSzHvzorIocJBLca3RPqFnxh1uJ07MJQmGf+Yh5M10=
+			R/5IWhz4hf9MytAViB666JjY8+InBkNj9MfTxKBEiZE=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RZbtZPDBYfrOJecKLdSrSpQQ/aA=
+			vZxUTepk4RhlwUpRmqNK4cR0P5o=
 			</data>
 			<key>hash2</key>
 			<data>
-			2sXJgHAAhzPIrksooB7y20jPldwa0rRwlJdjw+28hc4=
+			bY1tJ6wWP/ra9S+nS+tuSR+I+Fta01nxr4e5v1nAINI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -149,7 +149,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -180,24 +180,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -233,13 +221,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>
