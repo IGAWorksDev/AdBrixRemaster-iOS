@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "IgaworksADUtil.h"
-#import "Reachability.h"
+#import "ReachabilityAdBrixRm.h"
 
 
 FOUNDATION_EXPORT double AdBrixRMVersionNumber;
