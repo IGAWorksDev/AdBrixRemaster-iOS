@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "AdBrixRemastered"
-s.version      = "1.3.1"
+s.version      = "1.3.2"
 s.summary      = "AdBrixRM.framework"
 s.homepage     = "https://github.com/IGAWorksDev/SDK-IOS-Abx.Remaster-CocoaPod"
 
@@ -20,5 +20,6 @@ s.author       = { "freddy" => "freddy.kang@igaworks.com" }
 s.source       = { :git => "https://github.com/IGAWorksDev/SDK-IOS-Abx.Remaster-CocoaPod.git", :tag => "#{s.version}" }
 s.ios.vendored_frameworks = 'AdBrixRM.framework'
 s.libraries = 'xml2'
+s.swift_version = "5" 
 s.xcconfig     = { 'HEADER_SEARCH_PATHS' => '"$(SDKROOT)/usr/include/libxml2"' }
 end
