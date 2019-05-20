@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/AdBrixRM-Swift.h</key>
 		<data>
-		uu8+LTVmNgFpBoh5vzkCf2Q2x/A=
+		CHSU6OPSYsiWyKKdUgaJEX28kYc=
 		</data>
 		<key>Headers/AdBrixRM.h</key>
 		<data>
-		HGw3VPgIB0Uunog5HcLYq+6c9Tg=
+		IB9oEdVzfndlChRw6wxod/NG5uc=
 		</data>
 		<key>Headers/IgaworksADUtil.h</key>
 		<data>
@@ -18,27 +18,35 @@
 		</data>
 		<key>Headers/ReachabilityAdBrixRm.h</key>
 		<data>
-		b7nH3TfH1tJb/oeuw1eLHLBTxGA=
+		v68Sa1+yBWoBdMGsD0QOJrAzRbk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		wkaYNC5+c3l96oagvnRwk9xnZIw=
+		zaORsRL/wvsvFz64lT+dekv0E4U=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftdoc</key>
 		<data>
-		9xx7SGXc6oefgBMw5dYe0bF/tz0=
+		K3sjrbLGcrDnbgFwEuwjIxDIAv0=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<data>
-		jhS9SPilkBQX4xgosJBluMknbaw=
+		lrOLzotbg7v3mdbLtpXJPSPcaWU=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		drQ51MOqSg84bJRluzCSt7gzAGM=
+		BlsaYe95AuOJHtcarIh8NAY5vZk=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		CjXwf3F5gL4NsE/Go2JEfaldkUo=
+		7xE5jVon7JMtx40TqRkNkAyuHXI=
+		</data>
+		<key>Modules/AdBrixRM.swiftmodule/armv7.swiftdoc</key>
+		<data>
+		K3sjrbLGcrDnbgFwEuwjIxDIAv0=
+		</data>
+		<key>Modules/AdBrixRM.swiftmodule/armv7.swiftmodule</key>
+		<data>
+		lrOLzotbg7v3mdbLtpXJPSPcaWU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,22 +59,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uu8+LTVmNgFpBoh5vzkCf2Q2x/A=
+			CHSU6OPSYsiWyKKdUgaJEX28kYc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ot6tttufzPMmU1VDA68J2E/rG1AmOx/sMKTV/nsqBJE=
+			K2gKw5pGn8ERudtOfbJm2+mG1YseZctxZQtN003YZSw=
 			</data>
 		</dict>
 		<key>Headers/AdBrixRM.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HGw3VPgIB0Uunog5HcLYq+6c9Tg=
+			IB9oEdVzfndlChRw6wxod/NG5uc=
 			</data>
 			<key>hash2</key>
 			<data>
-			/9GwlJ39uAk2K8yKnuBTnKVxe0a4STm8Bwjw2IQWXE0=
+			cGX6EtlV1u5SGv+nxmYmF1JW2gWhDu5wjgcGI1qqjV4=
 			</data>
 		</dict>
 		<key>Headers/IgaworksADUtil.h</key>
@@ -84,55 +92,77 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			b7nH3TfH1tJb/oeuw1eLHLBTxGA=
+			v68Sa1+yBWoBdMGsD0QOJrAzRbk=
 			</data>
 			<key>hash2</key>
 			<data>
-			4aDEwxTqVm95SHK3DQhz6Ug0GpKyOXjvP/aJQ9a/jmc=
+			81xUvqUve3RKX5JHLAH+qlIft2L6aJCWpO3SCARzgA0=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9xx7SGXc6oefgBMw5dYe0bF/tz0=
+			K3sjrbLGcrDnbgFwEuwjIxDIAv0=
 			</data>
 			<key>hash2</key>
 			<data>
-			hn1CN4VQElrg5V74M8YYn4Qy9C8AnSbHI4c2+ZjrQ/4=
+			qf3MGAuKUEtzLH7I0HHDfme5bnb5LjoDij20NPmqyCg=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jhS9SPilkBQX4xgosJBluMknbaw=
+			lrOLzotbg7v3mdbLtpXJPSPcaWU=
 			</data>
 			<key>hash2</key>
 			<data>
-			pge8kp0QVWfWLLosrHjKYNxVbRl5CLvUQMx9sv3jpJo=
+			kbVJFezW5Rcaq0X6dTuGWCQg5J6KO87eHeUoBm3k3zY=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			drQ51MOqSg84bJRluzCSt7gzAGM=
+			BlsaYe95AuOJHtcarIh8NAY5vZk=
 			</data>
 			<key>hash2</key>
 			<data>
-			gppUfiHJVa62fAhhHzhXPuYQnO67SSwFxAmweT8U6vI=
+			Zj4O6FasmxrUsi/kJiFmcZAKXolOWUhhJMxGhrPzVho=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CjXwf3F5gL4NsE/Go2JEfaldkUo=
+			7xE5jVon7JMtx40TqRkNkAyuHXI=
 			</data>
 			<key>hash2</key>
 			<data>
-			a1dv3bNQFVrlfQlWi/JMw9OlUQR5IGlGxH5VTDGHRY8=
+			4ZpZsomfo5RiNm3+aCVHUgZsbHaxwrM59Z897nWeQ5U=
+			</data>
+		</dict>
+		<key>Modules/AdBrixRM.swiftmodule/armv7.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			K3sjrbLGcrDnbgFwEuwjIxDIAv0=
+			</data>
+			<key>hash2</key>
+			<data>
+			qf3MGAuKUEtzLH7I0HHDfme5bnb5LjoDij20NPmqyCg=
+			</data>
+		</dict>
+		<key>Modules/AdBrixRM.swiftmodule/armv7.swiftmodule</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lrOLzotbg7v3mdbLtpXJPSPcaWU=
+			</data>
+			<key>hash2</key>
+			<data>
+			kbVJFezW5Rcaq0X6dTuGWCQg5J6KO87eHeUoBm3k3zY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
