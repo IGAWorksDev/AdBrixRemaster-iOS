@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
 s.name         = "AdBrixRemastered"
-s.version      = "1.6.3000"
+s.version      = "1.6.3001"
 s.summary      = "AdBrixRM.framework"
 s.homepage     = "https://github.com/IGAWorksDev/SDK-IOS-Abx.Remaster-CocoaPod"
 
 s.license      = {
 :type => 'Commercial',
 :text => <<-LICENSE
-All text and design is copyright 2019 igaworks, Inc.
+All text and design is copyright 2020 igaworks, Inc.
 
 All rights reserved.
 
