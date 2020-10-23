@@ -209,6 +209,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+SWIFT_CLASS("_TtC8AdBrixRM24AbxSkbroadbandController")
+@interface AbxSkbroadbandController : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC8AdBrixRM15AdBrixBase64Key")
 @interface AdBrixBase64Key : NSObject
 - (void)setValue:(id _Nullable)value forKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
