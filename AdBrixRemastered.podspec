@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "AdBrixRemastered"
-s.version      = "1.6.5230"
+s.version      = "1.6.5240"
 s.summary      = "AdBrixRM.framework"
 s.homepage     = "https://github.com/IGAWorksDev/SDK-IOS-Abx.Remaster-CocoaPod"
 
@@ -15,7 +15,7 @@ https://github.com/IGAWorksDev/SDK-IOS-Abx.Remaster-CocoaPod
 LICENSE
 }
 
-s.platform = :ios, '8.0'
+s.platform = :ios, '9.0'
 s.author       = { "mike-igaw" => "mike@igaworks.com" }
 s.source       = { :git => "https://github.com/IGAWorksDev/SDK-IOS-Abx.Remaster-CocoaPod.git", :tag => "#{s.version}" }
 s.ios.vendored_frameworks = 'AdBrixRM.framework'
