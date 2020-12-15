@@ -357,6 +357,11 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 ///
 /// \endcode
 + (AdBrixRM * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+/// Skip getting IDFA by Developer
+/// <h1>Be Careful</h1>
+/// This function can make turn off for getting IDFA.
+- (void)stopGettingIDFA;
+- (void)startGettingIDFA;
 /// Set the <em>GDPR</em> status
 /// <h1>Be careful</h1>
 /// If this function called, all data <em>processing stopped</em>. And it cannot rollback until Application <em>reinstalled</em>.
@@ -479,7 +484,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 ///
 /// \endcode\param appleAdvertisingIdentifier 광고 Identifier
 ///
-- (void)setAppleAdvertisingIdentifier:(NSString * _Nonnull)appleAdvertisingIdentifier;
+- (void)setAppleAdvertisingIdentifier:(NSString * _Nonnull)appleAdvertisingIdentifier SWIFT_DEPRECATED_MSG("AdBrixRm sdk can get IDFA/IDFV without this api, please don't use this.");
 /// <em>로그인</em> - 본 함수로 <em>라이브옵스 push</em>, <em>커머스</em> 공동 사용가능
 /// <h1>Example Swift</h1>
 /// \code
@@ -2938,7 +2943,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)setNilValueForKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
 @end
 
-typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel, closed) {
   AdBrixLogLevelNONE = 0,
   AdBrixLogLevelTRACE = 1,
   AdBrixLogLevelDEBUG = 2,
@@ -2948,27 +2953,27 @@ typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel, open) {
 };
 
 /// 이벤트 전송 갯수를 설정 enum값
-typedef SWIFT_ENUM(NSInteger, AdBrixEventUploadCountInterval, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixEventUploadCountInterval, closed) {
   AdBrixEventUploadCountIntervalMIN = 10,
   AdBrixEventUploadCountIntervalNORMAL = 30,
   AdBrixEventUploadCountIntervalMAX = 1000,
 };
 
 /// 이벤트 전송 주기를 설정 enum값
-typedef SWIFT_ENUM(NSInteger, AdBrixEventUploadTimeInterval, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixEventUploadTimeInterval, closed) {
   AdBrixEventUploadTimeIntervalMIN = 30,
   AdBrixEventUploadTimeIntervalNORMAL = 60,
   AdBrixEventUploadTimeIntervalMAX = 120,
 };
 
 /// 유저 프로퍼티 기본 키 enum
-typedef SWIFT_ENUM(NSInteger, AdBrixUserPropKey, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixUserPropKey, closed) {
   AdBrixUserPropKeyAGE = 0,
   AdBrixUserPropKeyGENDER = 1,
 };
 
 /// 커머스 공유 채널
-typedef SWIFT_ENUM(NSInteger, AdBrixRmSharingChannel, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixRmSharingChannel, closed) {
   AdBrixRmSharingChannelAdBrixRmSharingFacebook = 1,
   AdBrixRmSharingChannelAdBrixRmSharingKakaoTalk = 2,
   AdBrixRmSharingChannelAdBrixRmSharingKakaoStory = 3,
@@ -3025,7 +3030,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixRmSharingChannel, open) {
 ///     AppleIdChannel
 ///   </li>
 /// </ul>
-typedef SWIFT_ENUM(NSInteger, AdBrixRmSignUpChannel, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixRmSignUpChannel, closed) {
   AdBrixRmSignUpChannelAdBrixRmSignUpKakaoChannel = 1,
   AdBrixRmSignUpChannelAdBrixRmSignUpNaverChannel = 2,
   AdBrixRmSignUpChannelAdBrixRmSignUpLineChannel = 3,
@@ -3075,7 +3080,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixRmSignUpChannel, open) {
 ///     ETCChannel
 ///   </li>
 /// </ul>
-typedef SWIFT_ENUM(NSInteger, AdBrixRmInviteChannel, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixRmInviteChannel, closed) {
   AdBrixRmInviteChannelAdBrixRmInviteKakaoChannel = 1,
   AdBrixRmInviteChannelAdBrixRmInviteNaverChannel = 2,
   AdBrixRmInviteChannelAdBrixRmInviteLineChannel = 3,
@@ -3101,7 +3106,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixRmInviteChannel, open) {
 ///     Uknown
 ///   </li>
 /// </ul>
-typedef SWIFT_ENUM(NSInteger, AdBrixGenderType, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixGenderType, closed) {
   AdBrixGenderTypeMale = 2,
   AdBrixGenderTypeFemale = 1,
   AdBrixGenderTypeUnknown = 0,
@@ -3153,7 +3158,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixGenderType, open) {
 ///     MYR
 ///   </li>
 /// </ul>
-typedef SWIFT_ENUM(NSInteger, AdBrixRmCurrencyType, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixRmCurrencyType, closed) {
   AdBrixRmCurrencyTypeKRW = 1,
   AdBrixRmCurrencyTypeUSD = 2,
   AdBrixRmCurrencyTypeJPY = 3,
@@ -3186,7 +3191,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixRmCurrencyType, open) {
 ///     ETC
 ///   </li>
 /// </ul>
-typedef SWIFT_ENUM(NSInteger, AdbrixRmPaymentMethod, open) {
+typedef SWIFT_ENUM(NSInteger, AdbrixRmPaymentMethod, closed) {
   AdbrixRmPaymentMethodCreditCard = 1,
   AdbrixRmPaymentMethodBankTransfer = 2,
   AdbrixRmPaymentMethodMobilePayment = 3,
@@ -3429,7 +3434,7 @@ SWIFT_CLASS("_TtC8AdBrixRM16AdBrixUserConfig")
 - (void)setNilValueForKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
 @end
 
-typedef SWIFT_ENUM(NSInteger, NoticeType, open) {
+typedef SWIFT_ENUM(NSInteger, NoticeType, closed) {
   NoticeTypeFullImage = 0,
   NoticeTypeFullWebView = 1,
   NoticeTypeModal = 2,
@@ -3822,6 +3827,11 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 ///
 /// \endcode
 + (AdBrixRM * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+/// Skip getting IDFA by Developer
+/// <h1>Be Careful</h1>
+/// This function can make turn off for getting IDFA.
+- (void)stopGettingIDFA;
+- (void)startGettingIDFA;
 /// Set the <em>GDPR</em> status
 /// <h1>Be careful</h1>
 /// If this function called, all data <em>processing stopped</em>. And it cannot rollback until Application <em>reinstalled</em>.
@@ -3944,7 +3954,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 ///
 /// \endcode\param appleAdvertisingIdentifier 광고 Identifier
 ///
-- (void)setAppleAdvertisingIdentifier:(NSString * _Nonnull)appleAdvertisingIdentifier;
+- (void)setAppleAdvertisingIdentifier:(NSString * _Nonnull)appleAdvertisingIdentifier SWIFT_DEPRECATED_MSG("AdBrixRm sdk can get IDFA/IDFV without this api, please don't use this.");
 /// <em>로그인</em> - 본 함수로 <em>라이브옵스 push</em>, <em>커머스</em> 공동 사용가능
 /// <h1>Example Swift</h1>
 /// \code
@@ -6403,7 +6413,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)setNilValueForKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
 @end
 
-typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel, closed) {
   AdBrixLogLevelNONE = 0,
   AdBrixLogLevelTRACE = 1,
   AdBrixLogLevelDEBUG = 2,
@@ -6413,27 +6423,27 @@ typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel, open) {
 };
 
 /// 이벤트 전송 갯수를 설정 enum값
-typedef SWIFT_ENUM(NSInteger, AdBrixEventUploadCountInterval, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixEventUploadCountInterval, closed) {
   AdBrixEventUploadCountIntervalMIN = 10,
   AdBrixEventUploadCountIntervalNORMAL = 30,
   AdBrixEventUploadCountIntervalMAX = 1000,
 };
 
 /// 이벤트 전송 주기를 설정 enum값
-typedef SWIFT_ENUM(NSInteger, AdBrixEventUploadTimeInterval, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixEventUploadTimeInterval, closed) {
   AdBrixEventUploadTimeIntervalMIN = 30,
   AdBrixEventUploadTimeIntervalNORMAL = 60,
   AdBrixEventUploadTimeIntervalMAX = 120,
 };
 
 /// 유저 프로퍼티 기본 키 enum
-typedef SWIFT_ENUM(NSInteger, AdBrixUserPropKey, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixUserPropKey, closed) {
   AdBrixUserPropKeyAGE = 0,
   AdBrixUserPropKeyGENDER = 1,
 };
 
 /// 커머스 공유 채널
-typedef SWIFT_ENUM(NSInteger, AdBrixRmSharingChannel, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixRmSharingChannel, closed) {
   AdBrixRmSharingChannelAdBrixRmSharingFacebook = 1,
   AdBrixRmSharingChannelAdBrixRmSharingKakaoTalk = 2,
   AdBrixRmSharingChannelAdBrixRmSharingKakaoStory = 3,
@@ -6490,7 +6500,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixRmSharingChannel, open) {
 ///     AppleIdChannel
 ///   </li>
 /// </ul>
-typedef SWIFT_ENUM(NSInteger, AdBrixRmSignUpChannel, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixRmSignUpChannel, closed) {
   AdBrixRmSignUpChannelAdBrixRmSignUpKakaoChannel = 1,
   AdBrixRmSignUpChannelAdBrixRmSignUpNaverChannel = 2,
   AdBrixRmSignUpChannelAdBrixRmSignUpLineChannel = 3,
@@ -6540,7 +6550,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixRmSignUpChannel, open) {
 ///     ETCChannel
 ///   </li>
 /// </ul>
-typedef SWIFT_ENUM(NSInteger, AdBrixRmInviteChannel, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixRmInviteChannel, closed) {
   AdBrixRmInviteChannelAdBrixRmInviteKakaoChannel = 1,
   AdBrixRmInviteChannelAdBrixRmInviteNaverChannel = 2,
   AdBrixRmInviteChannelAdBrixRmInviteLineChannel = 3,
@@ -6566,7 +6576,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixRmInviteChannel, open) {
 ///     Uknown
 ///   </li>
 /// </ul>
-typedef SWIFT_ENUM(NSInteger, AdBrixGenderType, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixGenderType, closed) {
   AdBrixGenderTypeMale = 2,
   AdBrixGenderTypeFemale = 1,
   AdBrixGenderTypeUnknown = 0,
@@ -6618,7 +6628,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixGenderType, open) {
 ///     MYR
 ///   </li>
 /// </ul>
-typedef SWIFT_ENUM(NSInteger, AdBrixRmCurrencyType, open) {
+typedef SWIFT_ENUM(NSInteger, AdBrixRmCurrencyType, closed) {
   AdBrixRmCurrencyTypeKRW = 1,
   AdBrixRmCurrencyTypeUSD = 2,
   AdBrixRmCurrencyTypeJPY = 3,
@@ -6651,7 +6661,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixRmCurrencyType, open) {
 ///     ETC
 ///   </li>
 /// </ul>
-typedef SWIFT_ENUM(NSInteger, AdbrixRmPaymentMethod, open) {
+typedef SWIFT_ENUM(NSInteger, AdbrixRmPaymentMethod, closed) {
   AdbrixRmPaymentMethodCreditCard = 1,
   AdbrixRmPaymentMethodBankTransfer = 2,
   AdbrixRmPaymentMethodMobilePayment = 3,
@@ -6894,7 +6904,7 @@ SWIFT_CLASS("_TtC8AdBrixRM16AdBrixUserConfig")
 - (void)setNilValueForKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
 @end
 
-typedef SWIFT_ENUM(NSInteger, NoticeType, open) {
+typedef SWIFT_ENUM(NSInteger, NoticeType, closed) {
   NoticeTypeFullImage = 0,
   NoticeTypeFullWebView = 1,
   NoticeTypeModal = 2,
