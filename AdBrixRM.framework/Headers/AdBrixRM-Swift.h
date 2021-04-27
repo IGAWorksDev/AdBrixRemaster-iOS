@@ -193,6 +193,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
+@import UserNotifications;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -209,6 +210,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="AdBrixRM",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+typedef SWIFT_ENUM(NSInteger, AbxIAMNoticeType, open) {
+  AbxIAMNoticeTypeFullImage = 0,
+  AbxIAMNoticeTypeFullWebView = 1,
+  AbxIAMNoticeTypeModal = 2,
+  AbxIAMNoticeTypeBar = 3,
+  AbxIAMNoticeTypeCarousel = 4,
+  AbxIAMNoticeTypeModal2 = 5,
+};
 
 
 SWIFT_CLASS("_TtC8AdBrixRM24AbxSkbroadbandController")
@@ -276,6 +286,14 @@ SWIFT_CLASS("_TtC8AdBrixRM16AdBrixController")
 @end
 
 
+SWIFT_CLASS("_TtC8AdBrixRM33AdBrixMultiPushProviderController") SWIFT_AVAILABILITY(ios,introduced=10.0)
+@interface AdBrixMultiPushProviderController : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)abxPushServiceExtensionTimeWillExpire;
+@end
+
+
 SWIFT_CLASS("_TtC8AdBrixRM14AdBrixPurchase")
 @interface AdBrixPurchase : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -285,6 +303,16 @@ SWIFT_CLASS("_TtC8AdBrixRM14AdBrixPurchase")
 - (void)setValue:(id _Nullable)value forKeyPath:(NSString * _Nonnull)keyPath SWIFT_DEPRECATED_MSG("Don't use this override function.");
 - (void)setValuesForKeysWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)keyedValues SWIFT_DEPRECATED_MSG("Don't use this override function.");
 - (void)setNilValueForKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
+@end
+
+@class UNNotificationRequest;
+@class UNNotificationContent;
+
+SWIFT_CLASS("_TtC8AdBrixRM17AdBrixPushService") SWIFT_AVAILABILITY(ios,introduced=10.0)
+@interface AdBrixPushService : UNNotificationServiceExtension
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)didReceiveNotificationRequest:(UNNotificationRequest * _Nonnull)request withContentHandler:(void (^ _Nonnull)(UNNotificationContent * _Nonnull))contentHandler;
+- (void)serviceExtensionTimeWillExpire;
 @end
 
 @protocol AdBrixRMDeeplinkDelegate;
@@ -298,7 +326,6 @@ SWIFT_CLASS("_TtC8AdBrixRM14AdBrixPurchase")
 @class UNUserNotificationCenter;
 @class UNNotification;
 @class UNNotificationResponse;
-enum NoticeType : NSInteger;
 @class UIViewController;
 enum AdBrixLogLevel : NSInteger;
 enum AdBrixEventUploadTimeInterval : NSInteger;
@@ -390,7 +417,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// @author igaworks
 - (void)userNotificationCenterWithCenter:(UNUserNotificationCenter * _Nonnull)center response:(UNNotificationResponse * _Nonnull)response SWIFT_AVAILABILITY(ios,introduced=10.0);
 - (void)getNoticePopupWithCompletionHandler:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completionHandler SWIFT_AVAILABILITY(ios,introduced=10.0);
-- (void)presentNoticePopupWithPopupSpaceKey:(NSString * _Nonnull)popupSpaceKey :(enum NoticeType)type SWIFT_AVAILABILITY(ios,introduced=10.0);
+- (void)presentNoticePopupWithPopupSpaceKey:(NSString * _Nonnull)popupSpaceKey :(enum AbxIAMNoticeType)type SWIFT_AVAILABILITY(ios,introduced=10.0);
 - (void)presentNoticePopupWithPopupSpaceKey:(NSString * _Nonnull)popupSpaceKey viewController:(UIViewController * _Nonnull)viewController SWIFT_AVAILABILITY(ios,introduced=10.0);
 /// 앱 실행시 <em>AppDelegate</em>에서 최초 <em>앱키</em>, <em>시크릿키</em> 등의 정보를 입력한다 - 디바이스id는 임의로 생성된다
 /// <h1>Example Swift</h1>
@@ -2944,6 +2971,8 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)setValue:(id _Nullable)value forKeyPath:(NSString * _Nonnull)keyPath SWIFT_DEPRECATED_MSG("Don't use this override function.");
 - (void)setValuesForKeysWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)keyedValues SWIFT_DEPRECATED_MSG("Don't use this override function.");
 - (void)setNilValueForKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
+- (void)didReceiveAbxPush:(UNNotificationRequest * _Nonnull)request withContentHandler:(void (^ _Nonnull)(UNNotificationContent * _Nonnull))contentHandler SWIFT_AVAILABILITY(ios,introduced=10.0);
+- (void)abxPushServiceExtensionTimeWillExpire SWIFT_AVAILABILITY(ios,introduced=10.0);
 @end
 
 typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel, open) {
@@ -3436,15 +3465,6 @@ SWIFT_CLASS("_TtC8AdBrixRM16AdBrixUserConfig")
 - (void)setValuesForKeysWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)keyedValues SWIFT_DEPRECATED_MSG("Don't use this override function.");
 - (void)setNilValueForKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
 @end
-
-typedef SWIFT_ENUM(NSInteger, NoticeType, open) {
-  NoticeTypeFullImage = 0,
-  NoticeTypeFullWebView = 1,
-  NoticeTypeModal = 2,
-  NoticeTypeBar = 3,
-  NoticeTypeCarousel = 4,
-  NoticeTypeModal2 = 5,
-};
 
 
 
@@ -3666,6 +3686,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
+@import UserNotifications;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -3682,6 +3703,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="AdBrixRM",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+typedef SWIFT_ENUM(NSInteger, AbxIAMNoticeType, open) {
+  AbxIAMNoticeTypeFullImage = 0,
+  AbxIAMNoticeTypeFullWebView = 1,
+  AbxIAMNoticeTypeModal = 2,
+  AbxIAMNoticeTypeBar = 3,
+  AbxIAMNoticeTypeCarousel = 4,
+  AbxIAMNoticeTypeModal2 = 5,
+};
 
 
 SWIFT_CLASS("_TtC8AdBrixRM24AbxSkbroadbandController")
@@ -3749,6 +3779,14 @@ SWIFT_CLASS("_TtC8AdBrixRM16AdBrixController")
 @end
 
 
+SWIFT_CLASS("_TtC8AdBrixRM33AdBrixMultiPushProviderController") SWIFT_AVAILABILITY(ios,introduced=10.0)
+@interface AdBrixMultiPushProviderController : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)abxPushServiceExtensionTimeWillExpire;
+@end
+
+
 SWIFT_CLASS("_TtC8AdBrixRM14AdBrixPurchase")
 @interface AdBrixPurchase : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -3758,6 +3796,16 @@ SWIFT_CLASS("_TtC8AdBrixRM14AdBrixPurchase")
 - (void)setValue:(id _Nullable)value forKeyPath:(NSString * _Nonnull)keyPath SWIFT_DEPRECATED_MSG("Don't use this override function.");
 - (void)setValuesForKeysWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)keyedValues SWIFT_DEPRECATED_MSG("Don't use this override function.");
 - (void)setNilValueForKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
+@end
+
+@class UNNotificationRequest;
+@class UNNotificationContent;
+
+SWIFT_CLASS("_TtC8AdBrixRM17AdBrixPushService") SWIFT_AVAILABILITY(ios,introduced=10.0)
+@interface AdBrixPushService : UNNotificationServiceExtension
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)didReceiveNotificationRequest:(UNNotificationRequest * _Nonnull)request withContentHandler:(void (^ _Nonnull)(UNNotificationContent * _Nonnull))contentHandler;
+- (void)serviceExtensionTimeWillExpire;
 @end
 
 @protocol AdBrixRMDeeplinkDelegate;
@@ -3771,7 +3819,6 @@ SWIFT_CLASS("_TtC8AdBrixRM14AdBrixPurchase")
 @class UNUserNotificationCenter;
 @class UNNotification;
 @class UNNotificationResponse;
-enum NoticeType : NSInteger;
 @class UIViewController;
 enum AdBrixLogLevel : NSInteger;
 enum AdBrixEventUploadTimeInterval : NSInteger;
@@ -3863,7 +3910,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// @author igaworks
 - (void)userNotificationCenterWithCenter:(UNUserNotificationCenter * _Nonnull)center response:(UNNotificationResponse * _Nonnull)response SWIFT_AVAILABILITY(ios,introduced=10.0);
 - (void)getNoticePopupWithCompletionHandler:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completionHandler SWIFT_AVAILABILITY(ios,introduced=10.0);
-- (void)presentNoticePopupWithPopupSpaceKey:(NSString * _Nonnull)popupSpaceKey :(enum NoticeType)type SWIFT_AVAILABILITY(ios,introduced=10.0);
+- (void)presentNoticePopupWithPopupSpaceKey:(NSString * _Nonnull)popupSpaceKey :(enum AbxIAMNoticeType)type SWIFT_AVAILABILITY(ios,introduced=10.0);
 - (void)presentNoticePopupWithPopupSpaceKey:(NSString * _Nonnull)popupSpaceKey viewController:(UIViewController * _Nonnull)viewController SWIFT_AVAILABILITY(ios,introduced=10.0);
 /// 앱 실행시 <em>AppDelegate</em>에서 최초 <em>앱키</em>, <em>시크릿키</em> 등의 정보를 입력한다 - 디바이스id는 임의로 생성된다
 /// <h1>Example Swift</h1>
@@ -6417,6 +6464,8 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)setValue:(id _Nullable)value forKeyPath:(NSString * _Nonnull)keyPath SWIFT_DEPRECATED_MSG("Don't use this override function.");
 - (void)setValuesForKeysWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)keyedValues SWIFT_DEPRECATED_MSG("Don't use this override function.");
 - (void)setNilValueForKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
+- (void)didReceiveAbxPush:(UNNotificationRequest * _Nonnull)request withContentHandler:(void (^ _Nonnull)(UNNotificationContent * _Nonnull))contentHandler SWIFT_AVAILABILITY(ios,introduced=10.0);
+- (void)abxPushServiceExtensionTimeWillExpire SWIFT_AVAILABILITY(ios,introduced=10.0);
 @end
 
 typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel, open) {
@@ -6909,15 +6958,6 @@ SWIFT_CLASS("_TtC8AdBrixRM16AdBrixUserConfig")
 - (void)setValuesForKeysWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)keyedValues SWIFT_DEPRECATED_MSG("Don't use this override function.");
 - (void)setNilValueForKey:(NSString * _Nonnull)key SWIFT_DEPRECATED_MSG("Don't use this override function.");
 @end
-
-typedef SWIFT_ENUM(NSInteger, NoticeType, open) {
-  NoticeTypeFullImage = 0,
-  NoticeTypeFullWebView = 1,
-  NoticeTypeModal = 2,
-  NoticeTypeBar = 3,
-  NoticeTypeCarousel = 4,
-  NoticeTypeModal2 = 5,
-};
 
 
 

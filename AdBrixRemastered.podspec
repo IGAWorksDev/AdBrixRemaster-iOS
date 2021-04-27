@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "AdBrixRemastered"
-s.version      = "1.6.5401"
+s.version      = "1.6.5406"
 s.summary      = "AdBrixRM.framework"
 s.homepage     = "https://github.com/IGAWorksDev/SDK-IOS-Abx.Remaster-CocoaPod"
 

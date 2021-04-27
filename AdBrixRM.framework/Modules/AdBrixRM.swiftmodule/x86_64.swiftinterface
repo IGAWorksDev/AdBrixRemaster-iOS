@@ -69,6 +69,11 @@ extension URL {
   @objc override dynamic public func setNilValueForKey(_ key: Swift.String)
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 10.0, *)
+open class AdBrixMultiPushProviderController : ObjectiveC.NSObject {
+  @objc public func abxPushServiceExtensionTimeWillExpire()
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @objc public class AdBrixBase64Key : ObjectiveC.NSObject {
   @available(*, deprecated, message: "Don't use this override function.")
   @objc override dynamic public func setValue(_ value: Any?, forKey key: Swift.String)
@@ -244,7 +249,7 @@ extension URL {
   @available(iOS 10.0, *)
   @objc public func getNoticePopup(completionHandler: @escaping (Swift.Dictionary<Swift.String, Any>) -> Swift.Void)
   @available(iOS 10.0, *)
-  @objc public func presentNoticePopup(popupSpaceKey: Swift.String, _ type: AdBrixRM.NoticeType)
+  @objc public func presentNoticePopup(popupSpaceKey: Swift.String, _ type: AdBrixRM.AbxIAMNoticeType)
   @available(iOS 10.0, *)
   @objc public func presentNoticePopup(popupSpaceKey: Swift.String, viewController: UIKit.UIViewController)
   @objc public func initAdBrix(appKey: Swift.String, secretKey: Swift.String)
@@ -682,6 +687,10 @@ extension URL {
   @objc override dynamic public func setValuesForKeys(_ keyedValues: [Swift.String : Any])
   @available(*, deprecated, message: "Don't use this override function.")
   @objc override dynamic public func setNilValueForKey(_ key: Swift.String)
+  @available(iOS 10.0, *)
+  @objc public func didReceiveAbxPush(_ request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void)
+  @available(iOS 10.0, *)
+  @objc public func abxPushServiceExtensionTimeWillExpire()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class AbxSkbroadbandController : ObjectiveC.NSObject {
@@ -814,7 +823,7 @@ open class Logger {
   @objc override dynamic public func setNilValueForKey(_ key: Swift.String)
   @objc deinit
 }
-@objc public enum NoticeType : Swift.Int {
+@objc public enum AbxIAMNoticeType : Swift.Int {
   case FullImage = 0, FullWebView = 1, Modal = 2, Bar = 3, Carousel = 4, Modal2 = 5
   public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
@@ -833,8 +842,11 @@ open class Logger {
   public init(trace: Swift.String, debug: Swift.String, info: Swift.String, warning: Swift.String, error: Swift.String)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @available(iOS 10.0, *)
-open class AdBrixPushService {
+@_inheritsConvenienceInitializers @available(iOS 10.0, *)
+@objc open class AdBrixPushService : UserNotifications.UNNotificationServiceExtension {
+  @objc override dynamic public init()
+  @objc override dynamic open func didReceive(_ request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void)
+  @objc override dynamic open func serviceExtensionTimeWillExpire()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AdBrixUserConfig : ObjectiveC.NSObject {
@@ -898,6 +910,6 @@ extension AdBrixRM.AdBrixRM.AdbrixRmPaymentMethod : Swift.Hashable {}
 extension AdBrixRM.AdBrixRM.AdbrixRmPaymentMethod : Swift.RawRepresentable {}
 extension AdBrixRM.Level : Swift.Hashable {}
 extension AdBrixRM.Level : Swift.RawRepresentable {}
-extension AdBrixRM.NoticeType : Swift.Equatable {}
-extension AdBrixRM.NoticeType : Swift.Hashable {}
-extension AdBrixRM.NoticeType : Swift.RawRepresentable {}
+extension AdBrixRM.AbxIAMNoticeType : Swift.Equatable {}
+extension AdBrixRM.AbxIAMNoticeType : Swift.Hashable {}
+extension AdBrixRM.AbxIAMNoticeType : Swift.RawRepresentable {}
