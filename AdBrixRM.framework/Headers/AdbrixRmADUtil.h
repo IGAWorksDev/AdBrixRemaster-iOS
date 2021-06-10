@@ -53,6 +53,7 @@
 + (NSString *)platformString;
 + (BOOL)isPhone;
 + (NSString *)carrier;
++ (BOOL)isHaveCellular;
 
 + (NSString *)screenHeight;
 + (NSString *)screenWidth;
