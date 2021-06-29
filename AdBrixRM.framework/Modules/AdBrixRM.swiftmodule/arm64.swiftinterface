@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name AdBrixRM
 @_exported import AdBrixRM
 import AdServices
@@ -85,8 +85,8 @@ open class AdBrixMultiPushProviderController : ObjectiveC.NSObject {
   @objc override dynamic public func setValuesForKeys(_ keyedValues: [Swift.String : Any])
   @available(*, deprecated, message: "Don't use this override function.")
   @objc override dynamic public func setNilValueForKey(_ key: Swift.String)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class AdBrixRmCommerceProductCategoryModel : ObjectiveC.NSObject {
   @objc override dynamic public init()
@@ -139,83 +139,83 @@ open class AdBrixMultiPushProviderController : ObjectiveC.NSObject {
   final public let AdBrixConstantsGENDER: Swift.String
   @objc public enum AdBrixLogLevel : Swift.Int {
     case NONE = 0, TRACE = 1, DEBUG = 2, INFO = 3, WARNING = 4, ERROR = 5
-    public typealias RawValue = Swift.Int
     public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
   }
   @objc public enum AdBrixEventUploadCountInterval : Swift.Int {
     case MIN = 10, NORMAL = 30, MAX = 60
-    public typealias RawValue = Swift.Int
     public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
   }
   @objc public enum AdBrixEventUploadTimeInterval : Swift.Int {
     case MIN = 30, NORMAL = 60, MAX = 120
-    public typealias RawValue = Swift.Int
     public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
   }
   @objc public enum AdBrixUserPropKey : Swift.Int {
     case AGE, GENDER
-    public typealias RawValue = Swift.Int
     public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
   }
   @objc public enum AdBrixRmSharingChannel : Swift.Int {
     case AdBrixRmSharingFacebook = 1, AdBrixRmSharingKakaoTalk = 2, AdBrixRmSharingKakaoStory = 3, AdBrixRmSharingLine = 4, AdBrixRmSharingWhatsApp = 5, AdBrixRmSharingQQ = 6, AdBrixRmSharingWeChat = 7, AdBrixRmSharingSMS = 8, AdBrixRmSharingEmail = 9, AdBrixRmSharingCopyUrl = 10, AdBrixRmSharingETC = 11
+    public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
-    public init?(rawValue: Swift.Int)
   }
   @objc public enum AdBrixRmSignUpChannel : Swift.Int {
     case AdBrixRmSignUpKakaoChannel = 1, AdBrixRmSignUpNaverChannel = 2, AdBrixRmSignUpLineChannel = 3, AdBrixRmSignUpGoogleChannel = 4, AdBrixRmSignUpFacebookChannel = 5, AdBrixRmSignUpTwitterChannel = 6, AdBrixRmSignUpWhatsAppChannel = 7, AdBrixRmSignUpQQChannel = 8, AdBrixRmSignUpWeChatChannel = 9, AdBrixRmSignUpUserIdChannel = 10, AdBrixRmSignUpETCChannel = 11, AdBrixRmSignUpSkTidChannel = 12, AdBrixRmSignUpAppleIdChannel = 13
+    public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
-    public init?(rawValue: Swift.Int)
   }
   @objc public enum AdBrixRmInviteChannel : Swift.Int {
     case AdBrixRmInviteKakaoChannel = 1, AdBrixRmInviteNaverChannel = 2, AdBrixRmInviteLineChannel = 3, AdBrixRmInviteGoogleChannel = 4, AdBrixRmInviteFacebookChannel = 5, AdBrixRmInviteTwitterChannel = 6, AdBrixRmInviteWhatsAppChannel = 7, AdBrixRmInviteQQChannel = 8, AdBrixRmInviteWeChatChannel = 9, AdBrixRmInviteETCChannel = 10
+    public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
-    public init?(rawValue: Swift.Int)
   }
   @objc public enum AdBrixGenderType : Swift.Int {
     case Male = 2, Female = 1, Unknown = 0
-    public typealias RawValue = Swift.Int
     public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
   }
   @objc public enum AdBrixRmCurrencyType : Swift.Int {
     case KRW = 1, USD = 2, JPY = 3, EUR = 4, GBP = 5, CNY = 6, TWD = 7, HKD = 8, IDR = 9, INR = 10, RUB = 11, THB = 12, VND = 13, MYR = 14
+    public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
-    public init?(rawValue: Swift.Int)
   }
   @objc public enum AdbrixRmPaymentMethod : Swift.Int {
     case CreditCard = 1, BankTransfer = 2, MobilePayment = 3, ETC = 4
+    public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
-    public init?(rawValue: Swift.Int)
   }
   @objc public class func sharedInstance() -> AdBrixRM.AdBrixRM
   @objc public func stopGettingIDFA()
@@ -705,15 +705,15 @@ open class AdBrixMultiPushProviderController : ObjectiveC.NSObject {
 }
 @objc public enum Completion : Swift.Int {
   case success = 0, fail
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
 @objc @_inheritsConvenienceInitializers public class AbxSkbroadbandController : ObjectiveC.NSObject {
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class Util_device : ObjectiveC.NSObject {
   @objc public class func sharedInstance() -> AdBrixRM.Util_device
@@ -810,8 +810,8 @@ extension Formatters {
 }
 public enum Level : Swift.Int {
   case none, trace, debug, info, warning, error
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -869,8 +869,8 @@ open class Logger {
     case InitRestartNotSynced
     case DeleteNotSynced
     case DeleteSynced
-    public typealias RawValue = Swift.Int
     public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
@@ -879,15 +879,15 @@ open class Logger {
 }
 @objc public enum AbxIAMNoticeType : Swift.Int {
   case FullImage = 0, FullWebView = 1, Modal = 2, Bar = 3, Carousel = 4, Modal2 = 5
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
 @_inheritsConvenienceInitializers @objc public class AdBrixConstant : ObjectiveC.NSObject {
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Themes {
   @objc deinit
