@@ -48,6 +48,7 @@
 + (BOOL)checkValidEmailAddress:(NSString *)emailAddress;
 
 + (NSString *)IDFA;
++ (NSString *)safeGetUUIDStringFromIDFA;
 + (NSString *)IDFV;
 + (BOOL)isAppleAdvertisingTrackingEnabled;
 + (NSString *)platformString;
